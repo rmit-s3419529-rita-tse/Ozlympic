@@ -9,11 +9,8 @@ public class Driver {
 	int[]athleteScoreArray;
 	int predictionWin=0;
 	
-	
 
-	//initialize athletes DB etc
-
-	public static void OzlympicStart() {
+	public void OzlympicStart() {
 //needs some cleaning up
 		
 		Scanner sc = new Scanner (System.in);
@@ -63,10 +60,10 @@ public class Driver {
 	//remember to scan close & exit...........
 
 //method to select which Sports Game to run
-	public static void selectGame() {
+	public void selectGame() {
 		
-		Scanner s = new Scanner (System.in);
-		int selection = s.nextInt();
+		Scanner sc = new Scanner (System.in);
+		int selection = sc.nextInt();
 		
 		do {
 			System.out.println("Enter 1 for Swimming, 2 for Cycling and 3 for Track");
@@ -79,13 +76,13 @@ public class Driver {
 			System.out.print("ERROR! PLEASE ENTER AGAIN:  ");
 
 			switch(selection){
-			case(1):  System.out.println("swimming");
+			case(1):  System.out.println("You have selected swimming");
 			RandomAthletes();//method to be done!!
 			break;
-			case(2): System.out.println("cycling");
+			case(2): System.out.println("you have selected cycling");
 			RandomAthletes();
 			break;
-			case(3): System.out.println("running");
+			case(3): System.out.println("you have selected track/running");
 			RandomAthletes();
 			break;
 			default:
@@ -96,7 +93,7 @@ public class Driver {
 			
 			
 
-			public static void RandomAthletes(){
+			public void RandomAthletes(){
 				Random ran = new Random();
 				int numberofAthletes = ran.nextInt(8);//at least 4 participants
 				//makes it select from the right array of athletes
@@ -109,21 +106,38 @@ public class Driver {
 			}
 
 			//select athletes methods based on the random numbers
-			public static void SelectAthletes(){
+			public void SelectAthletes(){
 				
 				//needs to write method here
 
-				//gamestarts method ;
+				//--->gamestarts method ;
 			}
 
+			
+			public void GameReadySetGo(){
+				System.out.println("Participating Athletes & Officials:");
+				System.out.println("===================================");
+				System.out.println("Game No: " + Game.gameID);
+				System.out.println("===================================");
+				
+				System.out.println("Ready, Set, Go!!!");
+			}
 			/*METHOD to start game from user's selection
 	----> method to randomly number of athletes
-	----> method to randomly select the atheletes from array
+	----> method to randomly select the athletes from array
+	
+	
+	
 			 *----> creates game # value
 			 *----> selects officials (make them only ref one type of game
 			 */
 
 
+			
+			
+			
+			
+			
 			private static void prediction() {
 				//system print out list of athletes
 				System.out.println("Which game do you want to predict the winner?");
